@@ -58,7 +58,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
     // Phong specular
     vec3 r = normalize(reflect(-lightDir, modelNormal));
-    float phongValue = max(0.0, dot(vec3(0.0), r));
+    float phongValue = max(0.0, dot(vec3(0.1), r));
     phongValue = pow(phongValue, 1.0);
 
     vec3 specular = d * vec3(phongValue);
